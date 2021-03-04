@@ -69,7 +69,7 @@ const Signin = () => {
           <button type="submit" className="btn btn-dark w-100">Login</button>
 
           <p className="my-2">
-            You don't have an account? <Link href="/register"><a style={{color: 'crimson'}}>Register Now</a></Link>
+            You don't have an account? <Link href="/register"><a style={{color: 'blue'}}>Register Now</a></Link>
           </p>
         </form>
       </div>

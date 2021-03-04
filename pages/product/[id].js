@@ -19,7 +19,7 @@ const DetailProduct = (props) => {
     return(
         <div className="row detail_page">
             <Head>
-                <title>Detail Product</title>
+                <title>Product Details</title>
             </Head>
 
             <div className="col-md-6">

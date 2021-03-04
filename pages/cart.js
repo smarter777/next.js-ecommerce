@@ -32,7 +32,7 @@ const Cart = () => {
   },[cart])
 
   useEffect(() => {
-    const cartLocal = JSON.parse(localStorage.getItem('__next__cart01__devat'))
+    const cartLocal = JSON.parse(localStorage.getItem('ecommerce_next'))
     if(cartLocal && cartLocal.length > 0){
       let newArr = []
       const updateCart = async () => {

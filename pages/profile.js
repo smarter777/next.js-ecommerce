@@ -59,7 +59,7 @@ const Profile = () => {
         if(file.size > 102400 * 102400) //100mb
             return dispatch({type: 'NOTIFY', payload: {error: 'The largest image size is 100mb.'}})
 
-        if(file.type !== "image/jpeg" && file.type !== "image/png") //1mb
+        if(file.type !== "image/jpeg" && file.type !== "image/png") 
             return dispatch({type: 'NOTIFY', payload: {error: 'Image format is incorrect.'}})
         
         setData({...data, avatar: file})

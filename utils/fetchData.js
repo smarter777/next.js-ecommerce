@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASE_URL
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const getData = async (url, token) => {
     const res = await fetch(`${baseUrl}/api/${url}`, {
