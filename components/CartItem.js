@@ -38,7 +38,7 @@ const CartItem = ({item, dispatch, cart}) => {
             </td>
 
             <td className="align-middle" style={{minWidth: '50px', cursor: 'pointer'}}>
-                <i className="far fa-trash-alt text-danger" aria-hidden="true" 
+                <i className="far fa-trash-alt text-danger" aria-hidden="false" 
                 style={{fontSize: '18px'}} data-toggle="modal" data-target="#exampleModal"
                 onClick={() => dispatch({
                     type: 'ADD_MODAL',

@@ -58,8 +58,8 @@ const ProductsManager = () => {
         return dispatch({type: 'NOTIFY', payload: {error: 'Files does not exist.'}})
 
         files.forEach(file => {
-            if(file.size > 102400 * 102400)
-            return err = 'The largest image size is 100mb'
+            if(file.size > 10240 * 10240)
+            return err = 'The largest image size is 10mb'
 
             if(file.type !== 'image/jpeg' && file.type !== 'image/png')
             return err = 'Image format is incorrect.'
