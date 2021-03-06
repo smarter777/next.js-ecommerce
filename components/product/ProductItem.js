@@ -11,10 +11,10 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`product/${product._id}`}>
-                    <a className="btn btn-info"
-                    style={{marginRight: '5px', flex: 1}}>View</a>
+                    <a className="btn"
+                    style={{marginRight: '5px', flex: 1, background: '#f582ae'}}>View</a>
                 </Link>
-                <button className="btn btn-success"
+                <button className="btn btn-dark"
                 style={{marginLeft: '5px', flex: 1}}
                 disabled={product.inStock === 0 ? true : false} 
                 onClick={() => dispatch(addToCart(product, cart))} >
@@ -28,11 +28,11 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`create/${product._id}`}>
-                    <a className="btn btn-info"
+                    <a className="btn btn-dark"
                     style={{marginRight: '5px', flex: 1}}>Edit</a>
                 </Link>
-                <button className="btn btn-danger"
-                style={{marginLeft: '5px', flex: 1}}
+                <button className="btn"
+                style={{marginLeft: '5px', flex: 1, background: '#f582ae'}}
                 data-toggle="modal" data-target="#exampleModal"
                 onClick={() => dispatch({
                     type: 'ADD_MODAL',
@@ -48,7 +48,7 @@ const ProductItem = ({product, handleCheck}) => {
     }
 
     return(
-        <div className="card" style={{ width: '18rem' }}>
+        <div className="card" style={{ width: '100%' }}>
             {
                 auth.user && auth.user.role === 'admin' &&
                 <input type="checkbox" checked={product.checked}
@@ -66,7 +66,7 @@ const ProductItem = ({product, handleCheck}) => {
                     <h6 className="text-danger">${product.price}</h6>
                     {
                         product.inStock > 0
-                        ? <h6 className="text-danger">In Stock: {product.inStock}</h6>
+                        ? <h6 className="text-info">In Stock: {product.inStock}</h6>
                         : <h6 className="text-danger">Out Stock</h6>
                     }
                 </div>

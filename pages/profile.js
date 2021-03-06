@@ -87,7 +87,7 @@ const Profile = () => {
 
     if(!auth.user) return null;
     return( 
-        <div className="profile_page">
+        <div className="profile_page mt-4">
             <Head>
                 <title>Profile</title>
             </Head>
@@ -133,7 +133,7 @@ const Profile = () => {
                         placeholder="Confirm new password" onChange={handleChange} />
                     </div>
 
-                    <button className="btn btn-info" disabled={notify.loading}
+                    <button className="btn mb-5" disabled={notify.loading} style={{ background: '#f582ae'}}
                     onClick={handleUpdateProfile}>
                         Update
                     </button>
@@ -159,9 +159,9 @@ const Profile = () => {
                                 {
                                     orders.map(order => (
                                         <tr key={order._id}>
-                                            <td className="p-2">
+                                            <td className="p-2" style={ { color: '#f582ae' } }>
                                                 <Link href={`/order/${order._id}`}>
-                                                    <a>{order._id}</a>
+                                                    <a style={{textDecoration: 'none'}}>{order._id}</a>
                                                 </Link>
                                                 
                                             </td>

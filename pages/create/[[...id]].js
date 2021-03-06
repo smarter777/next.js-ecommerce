@@ -113,7 +113,7 @@ const ProductsManager = () => {
     }
 
     return(
-        <div className="products_manager">
+        <div className="products_manager mt-4">
             <Head>
                 <title>Products Manager</title>
             </Head>
@@ -162,7 +162,7 @@ const ProductsManager = () => {
                         </select>
                     </div>
 
-                    <button type="submit" className="btn btn-info my-2 px-4">
+                    <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } }>
                         {onEdit ? 'Update': 'Create'}
                     </button>
 

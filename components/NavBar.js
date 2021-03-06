@@ -68,7 +68,7 @@ function NavBar() {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link  href="/">
                 <a className="navbar-brand">Juni Store</a>
             </Link>

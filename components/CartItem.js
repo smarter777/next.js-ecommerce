@@ -17,10 +17,10 @@ const CartItem = ({item, dispatch, cart}) => {
                     </Link>
                 </h5>
 
-                <h6 className="text-danger">${item.quantity * item.price}</h6>
+                <h6 style={{ color: '#f582ae'}}>${item.quantity * item.price}</h6>
                 {
                     item.inStock > 0
-                    ? <p className="mb-1 text-danger">In Stock: {item.inStock}</p>
+                    ? <p className="mb-1 text-info">In Stock: {item.inStock}</p>
                     : <p className="mb-1 text-danger">Out Stock</p>
                 }
             </td>

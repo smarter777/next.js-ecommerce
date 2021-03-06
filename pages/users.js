@@ -9,7 +9,7 @@ const Users = () => {
 
     if(!auth.user) return null;
     return(
-        <div className="table-responsive">
+        <div className="table-responsive mt-4">
             <Head>
                 <title>Users</title>
             </Head>

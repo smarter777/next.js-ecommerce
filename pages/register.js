@@ -76,7 +76,7 @@ const Register = () => {
           <button type="submit" className="btn btn-dark w-100">Register</button>
 
           <p className="my-2">
-            Already have an account? <Link href="/signin"><a style={{color: 'crimson'}}>Login Now</a></Link>
+            Already have an account? <Link href="/signin"><a style={{color: '#f582ae'}}>Login Now</a></Link>
           </p>
         </form>
       </div>

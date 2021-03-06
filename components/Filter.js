@@ -28,8 +28,8 @@ const Filter = ({state}) => {
     },[search])
 
     return (
-        <div className="input-group">
-            <div className="input-group-prepend col-md-2 px-0 mt-2">
+        <div className="input-group" style={{marginTop: '2rem', marginBottom: '2rem'}}>
+            <div className="input-group-prepend col-md-2 px-0">
                 <select className="custom-select text-capitalize"
                 value={category} onChange={handleCategory}>
 
@@ -43,12 +43,12 @@ const Filter = ({state}) => {
                 </select>
             </div>
 
-            <form autoComplete="off" className="mt-2 col-md-8 px-0">
-                <input type="text" className="form-control" list="title_product"
+            <form autoComplete="off" className="col-md-8 px-0">
+                <input type="text" className="form-control" list="title_product" placeholder="Searching our products here"
                 value={search.toLowerCase()} onChange={e => setSearch(e.target.value)} />
             </form>
 
-            <div className="input-group-prepend col-md-2 px-0 mt-2">
+            <div className="input-group-prepend col-md-2 px-0">
                 <select className="custom-select text-capitalize"
                 value={sort} onChange={handleSort}>
 
