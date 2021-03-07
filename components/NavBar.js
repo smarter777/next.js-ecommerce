@@ -69,8 +69,14 @@ function NavBar() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <Link  href="/">
-                <a className="navbar-brand">Juni Store</a>
+          
+            <Link href="/">
+               
+                <a className="navbar-brand">
+                <img src="https://img.icons8.com/dusk/64/000000/online-store.png"/>
+                    Juni Store
+                     
+                </a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

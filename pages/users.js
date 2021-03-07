@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Users = () => {
     const {state, dispatch} = useContext(DataContext)
-    const {users, auth, modal} = state
+    const {users, auth} = state
 
     if(!auth.user) return null;
     return(

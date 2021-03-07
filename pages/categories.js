@@ -47,12 +47,12 @@ const Categories = () => {
                 <title>Categories</title>
             </Head>
 
-            <div className="input-group mb-4 mt-5">
-                <input type="text" className="form-control"
+            <div className="input-group mb-4 mt-5 p-2 bg-dark rounded rounded-pill shadow-sm">
+                <input type="text" className="form-control rounded rounded-pill border-0 bg-info"
                 placeholder="Add a new category" value={name}
                 onChange={e => setName(e.target.value)} />
 
-                <button className="btn ml-1" style={{ background: '#f582ae'}}
+                <button className="btn ml-1 rounded rounded-pill" style={{ background: '#f582ae'}}
                 onClick={createCategory}>
                     {id ? "Update": "Create"}
                 </button>

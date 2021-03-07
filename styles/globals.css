@@ -23,6 +23,54 @@ img{
   object-position: 0 30%;
 }
 
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.footer-cta {
+  border-bottom: 1px solid #aaa;
+}
+
+.single-cta i {
+  color: #f582ae;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cta-text span {
+  color: #aaa;
+  font-size: 15px;
+}
+
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.copyright-text p a {
+  color: #8bd3dd;
+}
+
 /* ----------- Loading ------------- */
 @import url("./loading.css");
 

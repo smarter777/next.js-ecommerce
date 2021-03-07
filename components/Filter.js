@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import filterSearch from '../utils/filterSearch'
-import {getData} from '../utils/fetchData'
 import {useRouter} from 'next/router'
 
 const Filter = ({state}) => {
@@ -28,9 +27,18 @@ const Filter = ({state}) => {
     },[search])
 
     return (
+        
+    <div className="position-relative overflow-hidden p-2 p-md-4 m-md-2 text-center">
+    <div className="col-md-5 p-lg-4 mx-auto my-1">
+    <h1 className="display-5 fw-normal">Welcome to <div className="p-3 mx-auto text-center"><span style={{
+  'fontSize': '50px','display': 'inline-block','lineHeight': '0.1em', 'borderBottom': '0.3em solid pink',
+    } }>juniStore</span></div></h1>
+      <p class="lead fw-normal">Our fruits are always fresh and organic, we hand-picked from our local farmers and free delivery to your table.</p>
+    </div>
+    
         <div className="input-group" style={{marginTop: '2rem', marginBottom: '2rem'}}>
-            <div className="input-group-prepend col-md-2 px-0">
-                <select className="custom-select text-capitalize"
+            <div className="input-group-prepend col-md-2 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
+                <select className="custom-select text-capitalize rounded rounded-pill border-0 bg-info"
                 value={category} onChange={handleCategory}>
 
                     <option value="all">All Products</option>
@@ -43,13 +51,18 @@ const Filter = ({state}) => {
                 </select>
             </div>
 
-            <form autoComplete="off" className="col-md-8 px-0">
-                <input type="text" className="form-control" list="title_product" placeholder="Searching our products here"
+            <div className="col-md-8 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
+            <div className="input-group">
+            <input list="title_product" type="search" placeholder="Searching our products here" aria-describedby="search-button" className="form-control rounded rounded-pill border-0 bg-info"
                 value={search.toLowerCase()} onChange={e => setSearch(e.target.value)} />
-            </form>
+            <div className="input-group-append">
+              <button id="search-button" type="button" className="btn btn-link text-info"><i className="fa fa-search"></i></button>
+            </div>
+            </div>
+            </div>
 
-            <div className="input-group-prepend col-md-2 px-0">
-                <select className="custom-select text-capitalize"
+            <div className="input-group-prepend col-md-2 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
+                <select className="custom-select text-capitalize rounded rounded-pill border-0 bg-info"
                 value={sort} onChange={handleSort}>
 
                      <option value="-createdAt">Newest</option>
@@ -62,7 +75,8 @@ const Filter = ({state}) => {
             </div>
 
 
-        </div>
+            </div>
+            </div>
     )
 }
 

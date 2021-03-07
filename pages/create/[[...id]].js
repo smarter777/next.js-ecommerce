@@ -168,12 +168,12 @@ const ProductsManager = () => {
 
                 </div>
 
-                <div className="col-md-6 my-4">
+                <div className="col-md-6 my-4 bg-info rounded">
                     <div className="input-group mb-3">
                       
-                        <div className="custom-file border rounded">
+                        <div className="custom-file border-0 p-2 mt-3 rounded rounded-pill bg-dark">
                           
-                        <input type="file" class="form-control-file" 
+                        <input type="file" className="rounded rounded-pill bg-dark form-control-file " 
                             onChange={handleUploadInput} multiple accept="image/*" />
                         </div>
 

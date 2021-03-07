@@ -93,7 +93,7 @@ const Cart = () => {
   }
   
   if( cart.length === 0 ) 
-    return <img className="img-responsive w-100 mt-5" src="/empty_cart.svg" alt="empty cart"/>
+    return <img className="img-fluid w-80 mt-5" src="/empty_cart.svg" alt="empty cart"/>
 
     return(
       <div className="row mx-auto">

@@ -6,7 +6,7 @@ const Toast = ({msg, handleShow, bgColor, txtColor}) => {
             <div className={`toast-header ${txtColor}`}>
                 <strong className="mr-auto text-dark">{msg.title}</strong>
 
-                <button type="button" className="ml-2 mb-1 close text-light" 
+                <button type="button" className="ml-2 mb-1 close text-dark" 
                 data-dismiss="toast" style={{ outline: 'none'}} 
                 onClick={handleShow}>x</button>
             </div>

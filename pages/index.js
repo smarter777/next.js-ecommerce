@@ -70,11 +70,11 @@ const Home = (props) => {
 
       {
         auth.user && auth.user.role === 'admin' &&
-        <div className="delete_all btn btn-danger mt-2" style={{marginBottom: '-10px'}}>
+        <div className="delete_all btn btn-info mt-2" style={{marginBottom: '-10px'}}>
           <input type="checkbox" checked={isCheck} onChange={handleCheckALL}
           style={{width: '25px', height: '25px', transform: 'translateY(8px)'}} />
 
-          <button className="btn btn-danger ml-2"
+          <button className="btn ml-2" style={{ background: '#f582ae'}}
           data-toggle="modal" data-target="#exampleModal"
           onClick={handleDeleteAll}>
             DELETE ALL
