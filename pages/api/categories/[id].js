@@ -34,7 +34,7 @@ const updateCategory = async (req, res) => {
             }
         })
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please try again!'})
     }
 }
 
@@ -48,13 +48,13 @@ const deleteCategory = async (req, res) => {
 
         const products = await Products.findOne({category: id})
         if(products) return res.status(400).json({
-            err: "Please delete all products with a relationship"
+            err: "Please delete all products in this category"
         })
 
         await Categories.findByIdAndDelete(id)
         
-        res.json({msg: "Success! Deleted a category"})
+        res.json({msg: 'Success! Deleted a category'})
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }

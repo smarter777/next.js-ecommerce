@@ -14,11 +14,11 @@ const ProductItem = ({product, handleCheck}) => {
                     <a className="btn"
                     style={{marginRight: '5px', flex: 1, background: '#f582ae'}}>View</a>
                 </Link>
-                <button className="btn btn-dark"
+                <button className="btn btn-info"
                 style={{marginLeft: '5px', flex: 1}}
                 disabled={product.inStock === 0 ? true : false} 
                 onClick={() => dispatch(addToCart(product, cart))} >
-                    Buy
+                    Add to Cart
                 </button>
             </>
         )

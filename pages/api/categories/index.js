@@ -33,7 +33,7 @@ const createCategory = async (req, res) => {
         })
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please try again!'})
     }
 }
 
@@ -44,6 +44,6 @@ const getCategories = async (req, res) => {
         res.json({categories})
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }

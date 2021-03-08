@@ -34,6 +34,6 @@ const register = async (req, res) => {
         res.json({msg: "Register Success!"})
 
     }catch(err){
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }

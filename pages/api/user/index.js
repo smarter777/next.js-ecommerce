@@ -25,7 +25,7 @@ const getUsers = async (req, res) => {
         res.json({users})
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 
@@ -47,6 +47,6 @@ const uploadInfor = async (req, res) => {
             }
         })
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }

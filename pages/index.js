@@ -77,7 +77,7 @@ const Home = (props) => {
           <button className="btn ml-2" style={{ background: '#f582ae'}}
           data-toggle="modal" data-target="#exampleModal"
           onClick={handleDeleteAll}>
-            DELETE ALL
+            CLICK TO DELETE
           </button>
         </div>
       }

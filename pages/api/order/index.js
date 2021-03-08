@@ -29,7 +29,7 @@ const getOrders = async (req, res) => {
 
         res.json({orders})
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 
@@ -49,12 +49,12 @@ const createOrder = async (req, res) => {
         await newOrder.save()
 
         res.json({
-            msg: 'Order success! We will contact you to confirm the order.',
+            msg: 'Thank you for shopping with us! We will contact you to confirm the order.',
             newOrder
         })
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 

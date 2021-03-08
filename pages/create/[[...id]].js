@@ -73,7 +73,7 @@ const ProductsManager = () => {
 
         const imgCount = images.length
         if(imgCount + newImages.length > 5)
-        return dispatch({type: 'NOTIFY', payload: {error: 'Select up to 5 images.'}})
+        return dispatch({type: 'NOTIFY', payload: {error: 'Select up to 5 images only!'}})
         setImages([...images, ...newImages])
     }
 

@@ -3,7 +3,26 @@ import PaypalBtn from './paypalBtn'
 import {patchData} from '../utils/fetchData'
 import {updateItem} from '../store/Actions'
 
-const OrderDetail = ({orderDetail, state, dispatch}) => {
+const OrderDetail = ( { orderDetail, state, dispatch } ) =>
+{
+const dateOptions = {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+};
+const timeOptions = {
+  hour12: true,
+  hour: 'numeric',
+  minute: '2-digit',
+  second: '2-digit',
+};
+
+const date_time = {
+  ...timeOptions, ... dateOptions
+};
+
+
     const {auth, orders} = state
 
     const handleDelivered = (order) => {
@@ -34,20 +53,20 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                     <h2 className="text-break">Order {order._id}</h2>
 
                     <div className="mt-4 text-secondary">
-                        <h3>Shipping</h3>
+                        <h3>Order Details</h3>
                         <p>Name: {order.user.name}</p>
                         <p>Email: {order.user.email}</p>
                         <p>Address: {order.address}</p>
                         <p>Mobile: {order.mobile}</p>
 
-                        <div className={`alert ${order.delivered ? 'alert-success' : 'alert-danger'}
+                        <div className={`alert ${order.delivered ? 'alert-info' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.delivered ? `Deliverd on ${order.updatedAt}` : 'Not Delivered'
+                                order.delivered ? `Delivered on ${new Date (order.updatedAt).toLocaleDateString('en-US', date_time)}` : 'Not Delivered'
                             }
                             {
                                 auth.user.role === 'admin' && !order.delivered &&
-                                <button className="btn btn-dark text-uppercase"
+                                <button className="btn btn-info text-uppercase"
                                 onClick={() => handleDelivered(order)}>
                                     Mark as delivered
                                 </button>
@@ -64,10 +83,10 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                             order.paymentId && <p>PaymentId: <em>{order.paymentId}</em></p>
                         }
                         
-                        <div className={`alert ${order.paid ? 'alert-success' : 'alert-danger'}
+                        <div className={`alert ${order.paid ? 'alert-info' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.paid ? `Paid on ${order.dateOfPayment}` : 'Not Paid'
+                                order.paid ? `Paid on ${new Date (order.dateOfPayment).toLocaleDateString('en-US', date_time)}` : 'Not Paid'
                             }
                             
                         </div>
@@ -77,13 +96,15 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                             {
                                 order.cart.map(item => (
                                     <div className="row border-bottom mx-0 p-2 justify-content-betwenn
-                                    align-items-center" key={item._id} style={{maxWidth: '550px'}}>
+                                    align-items-center" key={ item._id } style={ { maxWidth: '550px' } }>
+                                        <Link href={`/product/${item._id}`}>
                                         <img src={item.images[0].url} alt={item.images[0].url}
-                                        style={{width: '50px', height: '45px', objectFit: 'cover'}} />
+                                                style={ { cursor: 'pointer', width: '50px', height: '45px', objectFit: 'cover' } } />
+                                        </Link>
 
                                         <h5 className="flex-fill text-secondary px-3 m-0">
                                             <Link href={`/product/${item._id}`}>
-                                                <a>{item.title}</a>
+                                                <a style={{textDecoration:'none', color: 'inherit'}}>{item.title}</a>
                                             </Link>
                                         </h5>
 

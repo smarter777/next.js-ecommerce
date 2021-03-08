@@ -11,7 +11,7 @@ export default async (req, res) => {
         if(!rf_token) return res.status(400).json({err: 'Please login now!'})
 
         const result = jwt.verify(rf_token, process.env.NEXT_PUBLIC_REFRESH_TOKEN_SECRET)
-        if(!result) return res.status(400).json({err: 'Your token is incorrect or has expired.'})
+        if(!result) return res.status(400).json({err: 'Your login session has expired. Please try again!'})
 
         const user = await Users.findById(result.id)
         if(!user) return res.status(400).json({err: 'User does not exist.'})
@@ -28,7 +28,7 @@ export default async (req, res) => {
             }
         })
     }catch(err){
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 

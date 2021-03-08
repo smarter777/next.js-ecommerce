@@ -33,7 +33,7 @@ const Filter = ({state}) => {
     <h1 className="display-5 fw-normal">Welcome to <div className="p-3 mx-auto text-center"><span style={{
   'fontSize': '50px','display': 'inline-block','lineHeight': '0.1em', 'borderBottom': '0.3em solid pink',
     } }>juniStore</span></div></h1>
-      <p class="lead fw-normal">Our fruits are always fresh and organic, we hand-picked from our local farmers and free delivery to your table.</p>
+      <p className="lead fw-normal">Our fruits are always fresh and organic, we hand-pick from our local farmers and free delivery to your table. Free-shipping for orders over $30!</p>
     </div>
     
         <div className="input-group" style={{marginTop: '2rem', marginBottom: '2rem'}}>

@@ -75,8 +75,8 @@ const Modal = () => {
                     Do you want to delete this item?
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-dark" data-dismiss="modal" onClick={handleSubmit}>Yes</button>
-                    <button type="button" className="btn btn-info" data-dismiss="modal">Cancel</button>
+                    <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={handleSubmit}>Yes</button>
+                    <button type="button" className="btn btn-dark" data-dismiss="modal">Cancel</button>
                 </div>
                 </div>
             </div>

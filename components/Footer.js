@@ -4,7 +4,7 @@ function Footer ()
 {
     return (
 
-    <footer className="footer">
+    <footer className="footer pt-4">
       <div className="container bg-dark text-light">
        
             <div className="footer-cta pt-5 pb-5">
@@ -44,7 +44,7 @@ function Footer ()
                             <p>Copyright &copy; 2021, All Right Reserved <a href="#">juniStore</a></p>
                         </div>
             </div>
-             <div className="col-xl-6 col-lg-6 text-center text-lg-right">
+             <div className="col-xl-6 col-lg-6 text-center text-lg-right pb-4">
                         <div className="copyright-text">
                 <p>Online Store icon by <a href="https://icons8.com/icon/77114/online-store">Icons8</a></p>
                 <p>Product Photos on <a href="https://unsplash.com/">Unplash</a></p>

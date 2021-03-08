@@ -68,7 +68,7 @@ const getProducts = async (req, res) => {
             products
         })
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 
@@ -92,6 +92,6 @@ const createProduct = async (req, res) => {
         res.json({msg: 'Success! Created a new product'})
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }

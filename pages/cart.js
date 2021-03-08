@@ -56,7 +56,7 @@ const Cart = () => {
 
   const handlePayment = async () => {
     if(!address || !mobile)
-    return dispatch({ type: 'NOTIFY', payload: {error: 'Please add your address and mobile.'}})
+    return dispatch({ type: 'NOTIFY', payload: {error: 'Please add your delivery address and contact number.'}})
 
     let newCart = [];
     for(const item of cart){
@@ -93,13 +93,19 @@ const Cart = () => {
   }
   
   if( cart.length === 0 ) 
-    return <img className="img-fluid w-80 mt-5" src="/empty_cart.svg" alt="empty cart"/>
+    return <>
+      <div className="col-md-5 p-lg-4 mx-auto my-1">
+        <p className="lead fw-normal">Your Shopping Cart Is Empty, Add Your Favorite Products and Continue Shopping!</p>
+      </div>
+    
+      <img className="img-fluid w-50 mt-5" src="/empty_cart.svg" alt="empty cart" /></>
 
     return(
       <div className="row mx-auto">
         <Head>
           <title>Cart Page</title>
         </Head>
+
 
         <div className="col-md-8 text-secondary table-responsive my-3">
           <h2 className="text-uppercase">Shopping Cart</h2>
@@ -117,15 +123,15 @@ const Cart = () => {
 
         <div className="col-md-4 my-3 text-right text-uppercase text-secondary">
             <form>
-              <h2>Shipping</h2>
+              <h2>Checkout</h2>
 
-              <label htmlFor="address">Address</label>
-              <input type="text" name="address" id="address"
+              <label htmlFor="address">Delivery Address</label>
+              <input type="text" name="address" id="address" placeholder="Type your delivery address here"
               className="form-control mb-2" value={address}
               onChange={e => setAddress(e.target.value)} />
 
-              <label htmlFor="mobile">Mobile</label>
-              <input type="text" name="mobile" id="mobile"
+              <label htmlFor="mobile">Contact Number</label>
+              <input type="text" name="mobile" id="mobile" placeholder="Type your contact number here"
               className="form-control mb-2" value={mobile}
               onChange={e => setMobile(e.target.value)} />
             </form>
@@ -134,7 +140,7 @@ const Cart = () => {
 
             
             <Link href={auth.user ? '#!' : '/signin'}>
-              <a className="btn btn-dark my-2" onClick={handlePayment}>Proceed with payment</a>
+              <a className="btn btn-info my-2" onClick={handlePayment}>Proceed with payment</a>
             </Link>
             
         </div>

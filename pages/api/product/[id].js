@@ -28,7 +28,7 @@ const getProduct = async (req, res) => {
         res.json({ product })
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 
@@ -50,7 +50,7 @@ const updateProduct = async (req, res) => {
 
         res.json({msg: 'Success! Updated a product'})
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 
@@ -67,6 +67,6 @@ const deleteProduct = async(req, res) => {
         res.json({msg: 'Deleted a product.'})
 
     } catch (err) {
-        return res.status(500).json({err: err.message})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
