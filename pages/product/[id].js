@@ -3,8 +3,12 @@ import { useState, useContext } from 'react'
 import { getData } from '../../utils/fetchData'
 import { DataContext } from '../../store/GlobalState'
 import { addToCart } from '../../store/Actions'
+import { useRouter } from 'next/router'
 
-const DetailProduct = (props) => {
+const DetailProduct = ( props ) =>
+{
+    
+    const router = useRouter()
     const [product] = useState(props.product)
     const [tab, setTab] = useState(0)
 
@@ -21,6 +25,16 @@ const DetailProduct = (props) => {
             <Head>
                 <title>Product Details</title>
             </Head>
+
+            <div className=''>
+                <button className="btn btn-info" onClick={() => router.back()}>
+                    <i className="fas fa-long-arrow-alt-left"  aria-hidden="true"></i> Go Back
+                </button>
+            </div>
+
+            <div className='row'>
+            
+
 
             <div className="col-md-6">
                 <img src={ product.images[tab].url } alt={ product.images[tab].url }
@@ -63,7 +77,8 @@ const DetailProduct = (props) => {
                     Add to Cart
                 </button>
 
-            </div>
+                </div>
+                </div>
         </div>
     )
 }

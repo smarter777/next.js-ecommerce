@@ -6,12 +6,13 @@ import Link from 'next/link'
 import { getData, postData } from '../utils/fetchData'
 import { useRouter } from 'next/router'
 
-
 const Cart = () => {
   const { state, dispatch } = useContext(DataContext)
   const { cart, auth, orders } = state
 
-  const [total, setTotal] = useState(0)
+  const [ total, setTotal ] = useState( 0 )
+  const [ shippingFee, setShippingFee ] = useState( 10 )
+   const [subTotal, setSubTotal ] = useState(0)
 
   const [address, setAddress] = useState('')
   const [mobile, setMobile] = useState('')
@@ -23,15 +24,18 @@ const Cart = () => {
     const getTotal = () => {
       const res = cart.reduce((prev, item) => {
         return prev + (item.price * item.quantity)
-      },0)
-
-      setTotal(res)
+      }, 0 )
+  
+      setSubTotal( res )
+      res > 30 ? setTotal(res) : setTotal(shippingFee + res)
+      
     }
-
+    
     getTotal()
-  },[cart])
-
-  useEffect(() => {
+   
+  }, [cart ] )
+  
+   useEffect(() => {
     const cartLocal = JSON.parse(localStorage.getItem('ecommerce_next'))
     if(cartLocal && cartLocal.length > 0){
       let newArr = []
@@ -122,9 +126,10 @@ const Cart = () => {
         </div>
 
         <div className="col-md-4 my-3 text-right text-uppercase text-secondary">
+          
+          <h3>Checkout Information</h3>
             <form>
-              <h2>Checkout</h2>
-
+      
               <label htmlFor="address">Delivery Address</label>
               <input type="text" name="address" id="address" placeholder="Type your delivery address here"
               className="form-control mb-2" value={address}
@@ -134,9 +139,14 @@ const Cart = () => {
               <input type="text" name="mobile" id="mobile" placeholder="Type your contact number here"
               className="form-control mb-2" value={mobile}
               onChange={e => setMobile(e.target.value)} />
-            </form>
+          </form>
 
-            <h3>Total: <span className="text-danger">${total}</span></h3>
+          <h3 className='pt-4'>Your Order Total</h3>
+          
+          <h6>subTotal: <span className="text-info">${subTotal}</span></h6>
+          <h6>Shipping Fee (free for orders over $30): <span className="text-danger">${subTotal > 30? 0: shippingFee}</span></h6>
+
+          <h4>Total: <span className="text-danger">${total}</span></h4>
 
             
             <Link href={auth.user ? '#!' : '/signin'}>

@@ -22,10 +22,10 @@
     left: 0;
     width: 100%;
     height: 50%;
-    background: #fff8;
+   
     text-align: center;
     font-weight: 400;
-    color: rgb(255, 140, 45);
+   
     transition: 0.3 ease-in-out;
 }
 

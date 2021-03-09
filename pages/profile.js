@@ -6,7 +6,8 @@ import Link from 'next/link'
 import valid from '../utils/valid'
 import { patchData } from '../utils/fetchData'
 
-import {imageUpload} from '../utils/imageUpload'
+import { imageUpload } from '../utils/imageUpload'
+import { formatDateTime} from '../utils/formatDateTime'
 
 const Profile = () => {
     const initialSate = {
@@ -165,8 +166,8 @@ const Profile = () => {
                                                 </Link>
                                                 
                                             </td>
-                                            <td className="p-2">
-                                                {new Date(order.createdAt).toLocaleDateString()}
+                                            <td className="p-1">
+                                                {formatDateTime(order.createdAt)}
                                             </td>
                                             <td className="p-2">${order.total}</td>
                                             <td className="p-2">

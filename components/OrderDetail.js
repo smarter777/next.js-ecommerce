@@ -1,27 +1,11 @@
 import Link from 'next/link'
 import PaypalBtn from './paypalBtn'
 import {patchData} from '../utils/fetchData'
-import {updateItem} from '../store/Actions'
+import { updateItem } from '../store/Actions'
+import { formatDateTime} from '../utils/formatDateTime'
 
 const OrderDetail = ( { orderDetail, state, dispatch } ) =>
 {
-const dateOptions = {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric'
-};
-const timeOptions = {
-  hour12: true,
-  hour: 'numeric',
-  minute: '2-digit',
-  second: '2-digit',
-};
-
-const date_time = {
-  ...timeOptions, ... dateOptions
-};
-
 
     const {auth, orders} = state
 
@@ -53,16 +37,16 @@ const date_time = {
                     <h2 className="text-break">Order {order._id}</h2>
 
                     <div className="mt-4 text-secondary">
-                        <h3>Order Details</h3>
+                        <h3>Shipping Details</h3>
                         <p>Name: {order.user.name}</p>
                         <p>Email: {order.user.email}</p>
-                        <p>Address: {order.address}</p>
-                        <p>Mobile: {order.mobile}</p>
+                        <p>Delivery Address: {order.address}</p>
+                        <p>Contact Number: {order.mobile}</p>
 
                         <div className={`alert ${order.delivered ? 'alert-info' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.delivered ? `Delivered on ${new Date (order.updatedAt).toLocaleDateString('en-US', date_time)}` : 'Not Delivered'
+                                order.delivered ? `Delivered on ${formatDateTime(order.updatedAt)}` : 'Not Delivered'
                             }
                             {
                                 auth.user.role === 'admin' && !order.delivered &&
@@ -86,16 +70,16 @@ const date_time = {
                         <div className={`alert ${order.paid ? 'alert-info' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.paid ? `Paid on ${new Date (order.dateOfPayment).toLocaleDateString('en-US', date_time)}` : 'Not Paid'
+                                order.paid ? `Paid on ${formatDateTime(order.dateOfPayment)}` : 'Not Paid'
                             }
                             
                         </div>
 
                         <div>
-                            <h3>Order Items</h3>
+                            <h3>Ordered Items</h3>
                             {
                                 order.cart.map(item => (
-                                    <div className="row border-bottom mx-0 p-2 justify-content-betwenn
+                                    <div className="row border-bottom mx-0 p-2 justify-content-between
                                     align-items-center" key={ item._id } style={ { maxWidth: '550px' } }>
                                         <Link href={`/product/${item._id}`}>
                                         <img src={item.images[0].url} alt={item.images[0].url}
