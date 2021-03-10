@@ -10,7 +10,8 @@ const DetailProduct = ( props ) =>
     
     const router = useRouter()
     const [product] = useState(props.product)
-    const [tab, setTab] = useState(0)
+    const [ tab, setTab ] = useState( 0 )
+    const [ clicked, setClicked ] = useState( false )
 
     const { state, dispatch } = useContext(DataContext)
     const { cart } = state
@@ -68,13 +69,12 @@ const DetailProduct = ( props ) =>
                 </div>
 
                 <div className="my-2">{product.description}</div>
-                <div className="my-2">
-                    {product.content}
-                </div>
+              
 
-                <button type="button" className="btn btn-info d-block my-3 px-5"
-                onClick={() => dispatch(addToCart(product, cart))} >
-                    Add to Cart
+                    <button type="button" className="btn btn-info d-block my-3 px-5"
+                         disabled={ product.inStock === 0 ? true : false }
+                        onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked(true) }} >
+                   {clicked?  "Item Added to Cart": "Add to Cart"}
                 </button>
 
                 </div>

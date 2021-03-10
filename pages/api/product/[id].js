@@ -39,13 +39,13 @@ const updateProduct = async (req, res) => {
         return res.status(400).json({err: 'Authentication is not valid.'})
 
         const {id} = req.query
-        const {title, price, inStock, description, content, category, images} = req.body
+        const {title, price, inStock, description, category, images} = req.body
 
-        if(!title || !price || !inStock || !description || !content || category === 'all' || images.length === 0 )
+        if(!title || !price || !inStock || !description || images.length === 0 )
         return res.status(400).json({err: 'Please add all the fields.'})
 
         await Products.findOneAndUpdate({_id: id}, {
-            title: title.toLowerCase(), price, inStock, description, content, category, images
+            title: title.toLowerCase(), price, inStock, description, category, images
         })
 
         res.json({msg: 'Success! Updated a product'})
@@ -64,7 +64,7 @@ const deleteProduct = async(req, res) => {
         const {id} = req.query
 
         await Products.findByIdAndDelete(id)
-        res.json({msg: 'Deleted a product.'})
+        res.json({msg: 'Successfully Deleted Product/Products.'})
 
     } catch (err) {
         return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})

@@ -33,10 +33,10 @@ function NavBar() {
                 <a className="dropdown-item">Users</a>
             </Link>
             <Link href="/create">
-                <a className="dropdown-item">Manage Products</a>
+                <a className="dropdown-item">Add or Manage Products</a>
             </Link>
             <Link href="/categories">
-                <a className="dropdown-item">Manage Categories</a>
+                <a className="dropdown-item">Add or Manage Categories</a>
             </Link>
             </>
         )

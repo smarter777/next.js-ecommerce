@@ -1,6 +1,10 @@
 import mongoose from 'mongoose'
 
-const CategoriesSchema = new mongoose.Schema({
+const CategoriesSchema = new mongoose.Schema( {
+    user: {
+        type: mongoose.Types.ObjectId,
+        ref: 'user'
+    },
     name: {
         type: String,
         required: true,

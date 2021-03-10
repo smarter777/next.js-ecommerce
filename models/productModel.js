@@ -15,17 +15,14 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    content: {
-        type: String,
-        required: true
-    },
+  
     images: {
         type: Array,
         required: true
     },
     category: {
         type: String,
-        required: true
+        required: false
     },
     checked: {
         type: Boolean,

@@ -24,7 +24,7 @@ const createCategory = async (req, res) => {
         const { name } = req.body
         if(!name) return res.status(400).json({err: "Name can not be left blank."})
 
-        const newCategory = new Categories({name})
+        const newCategory = new Categories({ user: result.id, name})
 
         await newCategory.save()
         res.json({

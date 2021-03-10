@@ -59,22 +59,23 @@ const Categories = () => {
             </div>
 
             {
-                categories.map(catogory => (
-                    <div key={catogory._id} className="card my-2 text-capitalize">
+                categories.map(category => (
+                    <div key={category._id} className="card my-2 text-capitalize">
                         <div className="card-body d-flex justify-content-between" style={{background: '#8bd3dd'}}>
-                            {catogory.name}
-
+                            { category.name }
+                          
+                            
                             <div style={{cursor: 'pointer'}}>
                                 <i className="fas fa-edit mr-2 text-info"
-                                onClick={() => handleEditCategory(catogory)}></i>
+                                onClick={() => handleEditCategory(category)}></i>
 
                                 <i className="fas fa-trash-alt text-danger"
                                 data-toggle="modal" data-target="#exampleModal"
                                 onClick={() => dispatch({
                                     type: 'ADD_MODAL',
                                     payload: [{ 
-                                        data: categories, id: catogory._id, 
-                                        title: catogory.name, type: 'ADD_CATEGORIES' 
+                                        data: categories, id: category._id, 
+                                        title: category.name, type: 'ADD_CATEGORIES' 
                                     }]
                                 })} ></i>
                             </div>

@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { DataContext } from '../../store/GlobalState'
 import { addToCart } from '../../store/Actions'
 
 const ProductItem = ({product, handleCheck}) => {
     const { state, dispatch } = useContext(DataContext)
     const { cart, auth } = state
+    const [ clicked, setClicked ] = useState( false )
 
     const userLink = () => {
         return(
@@ -15,10 +16,10 @@ const ProductItem = ({product, handleCheck}) => {
                     style={{marginRight: '5px', flex: 1, background: '#f582ae'}}>View</a>
                 </Link>
                 <button className="btn btn-info"
-                style={{marginLeft: '5px', flex: 1}}
-                disabled={product.inStock === 0 ? true : false} 
-                onClick={() => dispatch(addToCart(product, cart))} >
-                    Add to Cart
+                    style={ { marginLeft: '5px', flex: 1 } }
+                    disabled={ product.inStock === 0 ? true : false }
+                    onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked(true) }} >
+                   {clicked?  "Item Added to Cart": "Add to Cart"}
                 </button>
             </>
         )
@@ -58,9 +59,12 @@ const ProductItem = ({product, handleCheck}) => {
             }
             <img className="card-img-top" src={product.images[0].url} alt={product.images[0].url} />
             <div className="card-body">
+                <div className="row justify-content-between mx-0">
                 <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}
-                </h5>
+                    </h5>
+                    <h6 className='text-secondary'>{ auth.user? `Listed by: ${auth.user.name}`:'' }</h6>
+                </div>
 
                 <div className="row justify-content-between mx-0">
                     <h6 className="text-danger">${product.price}</h6>
