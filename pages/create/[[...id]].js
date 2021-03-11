@@ -11,11 +11,11 @@ const ProductsManager = () => {
         price: 0,
         inStock: 0,
         description: '',
-        
         category: 'all',
       
     }
-    const [product, setProduct] = useState(initialState)
+    const [ product, setProduct ] = useState( initialState )
+    const [disabled, setDisabled] = useState(true);
     const {title, price, inStock, description, category} = product
 
     const [ images, setImages ] = useState( [] )
@@ -25,7 +25,17 @@ const ProductsManager = () => {
 
     const router = useRouter()
     const {id} = router.query
-    const [onEdit, setOnEdit] = useState(false)
+    const [ onEdit, setOnEdit ] = useState( false )
+    
+    // Whenever the product state changes, run the useEffect function
+	useEffect(() => {
+		// The Object.values() method returns an array of values of the object passed in
+		// The every() method takes a callback and loops through the values array
+		// For every element in every() method, call the Boolean method on it
+		// The Boolean method will return true or false if the element is empty or not
+		const isProduct = Object.values(product).every((el) => Boolean(el));
+		isProduct ? setDisabled(false) : setDisabled(true);
+	}, [product]);
 
     useEffect(() => {
         if(id){
@@ -159,7 +169,7 @@ const ProductsManager = () => {
                         </select>
                     </div>
 
-                    <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } }>
+                    <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } } disabled={disabled}>
                         {onEdit ? 'Update': 'Create'}
                     </button>
 

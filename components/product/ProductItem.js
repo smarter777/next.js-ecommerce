@@ -63,7 +63,7 @@ const ProductItem = ({product, handleCheck}) => {
                 <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}
                     </h5>
-                    <h6 className='text-secondary'>{ auth.user? `Listed by: ${auth.user.name}`:'' }</h6>
+                   
                 </div>
 
                 <div className="row justify-content-between mx-0">

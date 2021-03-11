@@ -34,7 +34,7 @@ const updateCategory = async (req, res) => {
             }
         })
     } catch (err) {
-        return res.status(500).json({err: 'Sorry. Please try again!'})
+        return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})
     }
 }
 

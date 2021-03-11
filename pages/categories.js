@@ -63,8 +63,8 @@ const Categories = () => {
                     <div key={category._id} className="card my-2 text-capitalize">
                         <div className="card-body d-flex justify-content-between" style={{background: '#8bd3dd'}}>
                             { category.name }
-                          
-                            
+
+                         
                             <div style={{cursor: 'pointer'}}>
                                 <i className="fas fa-edit mr-2 text-info"
                                 onClick={() => handleEditCategory(category)}></i>
