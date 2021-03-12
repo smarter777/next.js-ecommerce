@@ -66,7 +66,7 @@ const Signin = () => {
             name="password" value={password} onChange={handleChangeInput} />
           </div>
           
-          <button type="submit" className="btn btn-info w-100">Login</button>
+          <button data-hover="Login" type="submit" className="slide btn w-100" style={ { background: '#8bd3dd' } }><div><i class="fas fa-sign-in-alt"></i></div></button>
 
           <p className="my-2">
             You don't have an account? <Link href="/register"><a style={{color: '#f582ae'}}>Register Now</a></Link>

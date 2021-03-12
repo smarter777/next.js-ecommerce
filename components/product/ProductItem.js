@@ -12,14 +12,26 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`product/${product._id}`}>
-                    <a className="btn"
-                    style={{marginRight: '5px', flex: 1, background: '#f582ae'}}>View</a>
+                    <a className="btn slide"
+                        data-hover="View"
+                        style={ { marginRight: '5px', flex: 1, background: '#f582ae' } }>
+                         <div>
+                            <i className="fas fa-eye pl-2"></i>
+                        </div>
+                    </a>
+                 
                 </Link>
-                <button className="btn btn-info"
+
+                              
+                <button className="cart-btn btn btn-info"
+                   
                     style={ { marginLeft: '5px', flex: 1 } }
                     disabled={ product.inStock === 0 ? true : false }
-                    onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked(true) }} >
-                   {clicked?  "Item Added to Cart": "Add to Cart"}
+                    onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked( true ); } } >
+                   
+                    { clicked ? "Item Added to Cart" : "Add to Cart" }
+                        <i className="fas fa-cart-plus pl-2"></i>
+                  
                 </button>
             </>
         )
@@ -29,10 +41,25 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`create/${product._id}`}>
-                    <a className="btn btn-dark"
-                    style={{marginRight: '5px', flex: 1}}>Edit</a>
+                    <a className="btn btn-warning slide"
+                    data-hover="Edit"
+                        style={ { marginRight: '5px', flex: 1 } }>
+                    <div><i className="fas fa-edit"></i></div>
+                 
+                 </a>
                 </Link>
-                <button className="btn"
+                 <Link href={`product/${product._id}`}>
+                    <a className="btn slide"
+                        data-hover="View"
+                        style={ { marginRight: '5px', flex: 1, background: '#8bd3dd' } }>
+                         <div>
+                            <i className="fas fa-eye pl-2"></i>
+                        </div>
+                    </a>
+                 
+                </Link>
+                <button className="btn slide"
+                data-hover="Delete"
                 style={{marginLeft: '5px', flex: 1, background: '#f582ae'}}
                 data-toggle="modal" data-target="#exampleModal"
                 onClick={() => dispatch({
@@ -41,8 +68,9 @@ const ProductItem = ({product, handleCheck}) => {
                         data: '', id: product._id, 
                         title: product.title, type: 'DELETE_PRODUCT' 
                     }]
-                })} >
-                    Delete
+                } ) } >
+                    <div><i className="fas fa-trash-alt"></i></div>
+                  
                 </button>
             </>
         )

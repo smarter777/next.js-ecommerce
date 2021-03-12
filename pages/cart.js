@@ -150,7 +150,7 @@ const Cart = () => {
 
             
             <Link href={auth.user ? '#!' : '/signin'}>
-              <a className="btn btn-info my-2" onClick={handlePayment}>Proceed with payment</a>
+              <a className="slide btn d-block my-3 px-5" style={ { background: '#8bd3dd' } } data-hover='Proceed with Payment' onClick={handlePayment}><div><i className="far fa-credit-card"></i></div></a>
             </Link>
             
         </div>

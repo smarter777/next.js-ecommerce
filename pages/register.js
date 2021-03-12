@@ -73,7 +73,7 @@ const Register = () => {
             name="cf_password" value={cf_password} onChange={handleChangeInput} />
           </div>
           
-          <button type="submit" className="btn btn-info w-100">Register</button>
+          <button data-hover="Register" type="submit" className="slide btn w-100" style={ { background: '#8bd3dd' } }><div><i class="fas fa-user-plus"></i></div></button>
 
           <p className="my-2">
             Already have an account? <Link href="/signin"><a style={{color: '#f582ae'}}>Login Now</a></Link>

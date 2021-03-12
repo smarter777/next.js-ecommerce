@@ -127,6 +127,7 @@ const ProductsManager = () => {
             <Head>
                 <title>Products Manager</title>
             </Head>
+            <h5>Please add all fields and upload images of your product as below:</h5>
             <form className="row" onSubmit={handleSubmit}>
                 <div className="col-md-6">
                     
@@ -168,10 +169,15 @@ const ProductsManager = () => {
                             }
                         </select>
                     </div>
+                    { onEdit ?
 
-                    <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } } disabled={disabled}>
-                        {onEdit ? 'Update': 'Create'}
+                        <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } } >
+                            Update
+                    </button> :
+                        <button type="submit" className="btn my-2 px-4" style={ { background: '#f582ae' } } disabled={ disabled }>
+                            Create
                     </button>
+                    }
 
                 </div>
 

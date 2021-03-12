@@ -84,7 +84,7 @@ function NavBar() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul className="navbar-nav p-1">
                     <li className="nav-item">
-                       
+                        { auth.user && auth.user.role === 'admin' ? "" :
                             <Link href="/cart">
                                 <a className={ "nav-link" + isActive( '/cart' ) }>
                                     <i className="fas fa-shopping-cart position-relative" aria-hidden="true">
@@ -103,6 +103,7 @@ function NavBar() {
                                     </i> Cart
                             </a>
                             </Link>
+                        }
                     </li>
                     {
                         Object.keys(auth).length === 0 

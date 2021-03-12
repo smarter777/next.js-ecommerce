@@ -4,6 +4,7 @@ import { getData } from '../../utils/fetchData'
 import { DataContext } from '../../store/GlobalState'
 import { addToCart } from '../../store/Actions'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const DetailProduct = ( props ) =>
 {
@@ -14,7 +15,8 @@ const DetailProduct = ( props ) =>
     const [ clicked, setClicked ] = useState( false )
 
     const { state, dispatch } = useContext(DataContext)
-    const { cart } = state
+    const { cart, auth } = state
+    
 
     const isActive = (index) => {
         if(tab === index) return " active";
@@ -29,14 +31,12 @@ const DetailProduct = ( props ) =>
 
             <div className=''>
                 <button className="btn btn-info" onClick={() => router.back()}>
-                    <i className="fas fa-long-arrow-alt-left"  aria-hidden="true"></i> Go Back
+                    <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
                 </button>
             </div>
 
             <div className='row'>
-            
-
-
+  
             <div className="col-md-6">
                 <img src={ product.images[tab].url } alt={ product.images[tab].url }
                 className="d-block img-thumbnail rounded mt-4 w-100"
@@ -70,12 +70,25 @@ const DetailProduct = ( props ) =>
 
                 <div className="my-2">{product.description}</div>
               
-
-                    <button type="button" className="btn btn-info d-block my-3 px-5"
-                         disabled={ product.inStock === 0 ? true : false }
-                        onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked(true) }} >
-                   {clicked?  "Item Added to Cart": "Add to Cart"}
-                </button>
+                    { auth.user && auth.user.role === 'admin' ? "" :
+                        <div className="row justify-content-between mx-0">
+                        <button type="button" className="cart-btn btn btn-info d-block my-3 px-5"
+                            disabled={ product.inStock === 0 ? true : false }
+                            onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked( true ); } } >
+                            
+                            { clicked ? "Item Added to Cart" : "Add to Cart" }
+                             <i className="fas fa-cart-plus pl-2"></i>
+                        </button>
+                         <Link href="/cart">
+                            <button data-hover='View Cart' type="button" className="slide btn d-block my-3 px-5"  
+                                style={ { background: '#f582ae'} }>
+                          
+                            <div> <i className="fas fa-shopping-cart"></i></div>
+                            </button>
+                                
+                        </Link>
+                        </div>
+                    }
 
                 </div>
                 </div>

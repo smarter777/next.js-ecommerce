@@ -71,6 +71,65 @@ img{
   color: #8bd3dd;
 }
 
+ .slide:hover {
+   cursor: pointer
+ }
+
+ .slide {
+   background: transparent;
+   outline: none;
+   position: relative;
+   border: 2px solid #111;
+  
+   overflow: hidden;
+ }
+
+ /*button:before (attr data-hover)*/
+ .slide:hover:before {
+   opacity: 1;
+   transform: translate(0, 0);
+ }
+
+ .slide:before {
+   content: attr(data-hover);
+   position: absolute;
+  
+   left: 0;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-weight: 800;
+   font-size: .8em;
+   opacity: 0;
+   transform: translate(-100%, 0);
+   transition: all .3s ease-in-out;
+ }
+
+ /*button div (button text before hover)*/
+ .slide:hover div {
+   opacity: 0;
+   transform: translate(100%, 0)
+ }
+
+ .slide div {
+   text-transform: uppercase;
+    font-weight: 800;
+   font-size: 1em;
+   transition: all .3s ease-in-out;
+ }
+
+ .cart-btn{
+   border: 2px solid black
+
+ }
+ .cart-btn:hover{
+    border-radius: 3rem;
+    border: 2px solid black;
+    background: #111;
+    
+ }
+
+
 /* ----------- Loading ------------- */
 @import url("./loading.css");
 
@@ -82,3 +141,4 @@ img{
 
 /* ----------- Products Manager ------------- */
 @import url("./products_manager.css");
+
