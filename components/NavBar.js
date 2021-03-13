@@ -29,14 +29,16 @@ function NavBar() {
     const adminRouter = () => {
         return(
             <>
-            <Link href="/users">
-                <a className="dropdown-item">Users</a>
-            </Link>
+                { auth.user && auth.user.role === 'admin' && auth.user.root &&
+                    <Link href="/users">
+                        <a className="dropdown-item">Users</a>
+                    </Link>
+                }
             <Link href="/create">
-                <a className="dropdown-item">Add or Manage Products</a>
+                <a className="dropdown-item">Add/ Manage Products</a>
             </Link>
             <Link href="/categories">
-                <a className="dropdown-item">Add or Manage Categories</a>
+                <a className="dropdown-item">Add/ Manage Categories</a>
             </Link>
             </>
         )
@@ -55,7 +57,7 @@ function NavBar() {
 
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <Link href="/profile">
-                        <a className="dropdown-item">Profile</a>
+                        <a className="dropdown-item">Profile/ Order History</a>
                     </Link>
                     {
                         auth.user.role === 'admin' && adminRouter()
