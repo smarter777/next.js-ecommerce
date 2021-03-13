@@ -105,12 +105,17 @@ const Cart = () => {
       <img className="img-fluid w-50 mt-5" src="/empty_cart.svg" alt="empty cart" /></>
 
     return(
-      <div className="row mx-auto">
+      <div className="mx-auto">
         <Head>
           <title>Cart Page</title>
         </Head>
-
-
+          <div className="mt-4 mb-4">
+                <button className="btn btn-info" onClick={() => router.back()}>
+                    <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
+                </button>
+        </div>
+        
+        <div className='row'>
         <div className="col-md-8 text-secondary table-responsive my-3">
           <h2 className="text-uppercase">Shopping Cart</h2>
 
@@ -154,7 +159,8 @@ const Cart = () => {
             </Link>
             
         </div>
-      </div>
+        </div>
+        </div>
     )
   }
   

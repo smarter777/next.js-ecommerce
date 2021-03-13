@@ -29,7 +29,7 @@ const DetailProduct = ( props ) =>
                 <title>Product Details</title>
             </Head>
 
-            <div className=''>
+            <div>
                 <button className="btn btn-info" onClick={() => router.back()}>
                     <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
                 </button>
@@ -76,7 +76,7 @@ const DetailProduct = ( props ) =>
                             disabled={ product.inStock === 0 ? true : false }
                             onClick={ () => { dispatch( addToCart( product, cart ) ); setClicked( true ); } } >
                             
-                            { clicked ? "Item Added to Cart" : "Add to Cart" }
+                            { clicked ? "Item in Cart" : "Add to Cart" }
                              <i className="fas fa-cart-plus pl-2"></i>
                         </button>
                          <Link href="/cart">
