@@ -12,27 +12,33 @@ function Footer ()
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
                             <i className="fas fa-map-marker-alt"></i>
-                          <div className="cta-text">
+                                <div className="cta-text">
+                            <a href="https://www.google.com/maps/place/San+Diego,+CA/@32.8242404,-117.389167,10z/data=!3m1!4b1!4m5!3m4!1s0x80d9530fad921e4b:0xd3a21fdfd15df79!8m2!3d32.715738!4d-117.1610838" target="_blank" rel="noopener noreferrer">
                                 <h4>Find us</h4>
                                 <span>123 Rd San Diego CA 12345</span>
+                              </a>          
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
                             <i className="fas fa-phone"></i>
-                            <div className="cta-text">
+                                <div className="cta-text">
+                                <a href="tel:1234567890" target="_blank" rel="noopener noreferrer">
                                 <h4>Call us</h4>
                                 <span>1234567890</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
                             <i className="far fa-envelope-open"></i>
-                            <div className="cta-text">
-                                <h4>Mail us</h4>
-                                <span>contact@info.com</span>
+                                <div className="cta-text">
+                                    <a href="mailto:jcontact@info.com" target="_blank" rel="noopener noreferrer">
+                                    <h4>Mail us</h4>
+                                    <span>contact@info.com</span>
+                                    </a>
                             </div>
                         </div>
                     </div>
