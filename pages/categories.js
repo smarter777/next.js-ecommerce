@@ -36,9 +36,9 @@ const Categories = () => {
         return dispatch({type: 'NOTIFY', payload: {success: res.msg}})
     }
 
-    const handleEditCategory = (catogory) => {
-        setId(catogory._id)
-        setName(catogory.name)
+    const handleEditCategory = (category) => {
+        setId(category._id)
+        setName(category.name)
     }
 
     return(

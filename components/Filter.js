@@ -74,9 +74,9 @@ const Filter = ({state}) => {
                 </select>
             </div>
 
+            </div>
 
-            </div>
-            </div>
+        </div>
     )
 }
 
