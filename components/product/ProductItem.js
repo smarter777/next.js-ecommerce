@@ -90,7 +90,10 @@ const ProductItem = ({product, handleCheck}) => {
                 <div className="row justify-content-between mx-0">
                 <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}
-                    </h5>
+                </h5>
+                    
+                
+             <span class="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>
                    
                 </div>
 

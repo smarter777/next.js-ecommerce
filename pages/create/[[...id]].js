@@ -8,6 +8,7 @@ import {useRouter} from 'next/router'
 const ProductsManager = () => {
     const initialState = {
         title: '',
+        seller: '',
         price: 0,
         inStock: 0,
         description: '',
@@ -16,7 +17,7 @@ const ProductsManager = () => {
     }
     const [ product, setProduct ] = useState( initialState )
     const [disabled, setDisabled] = useState(true);
-    const {title, price, inStock, description, category} = product
+    const {title, seller, price, inStock, description, category} = product
 
     const [ images, setImages ] = useState( [] )
   
@@ -98,7 +99,7 @@ const ProductsManager = () => {
         if(auth.user.role !== 'admin') 
         return dispatch({type: 'NOTIFY', payload: {error: 'Authentication is not valid.'}})
 
-        if(!title || !price || !inStock || !description || images.length === 0)
+        if(!title || !seller || !price || !inStock || !description || images.length === 0)
         return dispatch({type: 'NOTIFY', payload: {error: 'Please add all the fields.'}})
 
     
@@ -133,6 +134,10 @@ const ProductsManager = () => {
                     
                     <input type="text" name="title" value={title}
                     placeholder="Title" className="d-block my-4 w-100 p-2"
+                    onChange={ handleChangeInput } />
+                    
+                     <input type="text" name="seller" value={seller}
+                    placeholder="Seller" className="d-block my-4 w-100 p-2"
                     onChange={handleChangeInput} />
 
                     <div className="row">
