@@ -85,12 +85,25 @@ const ProductItem = ({product, handleCheck}) => {
                 style={{height: '20px', width: '20px'}}
                 onChange={() => handleCheck(product._id)} />
             }
-            <img className="card-img-top" src={product.images[0].url} alt={product.images[0].url} />
+
+             <div class="img-hover-zoom img-hover-zoom--zoom-n-rotate">
+                 <Link href={`product/${product._id}`}>
+                <img className="card-img-top" src={ product.images[ 0 ].url } alt={ product.images[ 0 ].url } />
+                
+             </Link>
+                
+            </div>
+            
+
             <div className="card-body">
                 <div className="row justify-content-between mx-0">
-                <h5 className="card-title text-capitalize" title={product.title}>
+                  <Link href={`product/${product._id}`}>
+                        <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}
                 </h5>
+                </Link>
+                    
+
                     
                 
              <span class="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>

@@ -52,8 +52,8 @@ function Footer ()
             </div>
              <div className="col-xl-6 col-lg-6 text-center text-lg-right pb-4">
                         <div className="copyright-text">
-                <p>Online Store icon by <a href="https://icons8.com/icon/77114/online-store">Icons8</a></p>
-                <p>Product Photos on <a href="https://unsplash.com/">Unplash</a></p>
+                <p>Online Store icon by <a href="https://icons8.com/icon/77114/online-store" target="_blank" rel="noopener noreferrer">Icons8</a></p>
+                <p>Product Photos on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unplash</a></p>
                         </div>
               </div>
           </div>
