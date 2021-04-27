@@ -33,7 +33,9 @@ const Filter = ({state}) => {
     <h1 className="display-5 fw-normal">Welcome to <div className="p-3 mx-auto text-center"><span style={{
   'fontSize': '50px','display': 'inline-block','lineHeight': '0.1em', 'borderBottom': '0.3em solid pink',
     } }>juniStore</span></div></h1>
-      <p className="lead fw-normal">Our fruits are always fresh and organic, we hand-pick from our local farmers and free delivery to your table. Free-shipping for orders over $30!</p>
+      <p className="lead fw-normal">For customers, you can find your favorite products sold by our partner merchandises. For sellers, please <span style={{
+  'fontSize': '20px','display': 'inline-block','lineHeight': '0.1em', 'borderBottom': '0.3em solid pink',
+    } }><a href="#footer">contact me </a></span> if you would like to show your products here!</p>
     </div>
     
         <div className="input-group" style={{marginTop: '2rem', marginBottom: '2rem'}}>

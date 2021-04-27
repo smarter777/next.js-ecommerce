@@ -4,7 +4,7 @@ function Footer ()
 {
     return (
 
-    <footer className="footer pt-4">
+    <footer className="footer pt-4" id="footer">
       <div className="container bg-dark text-light">
        
             <div className="footer-cta pt-5 pb-5">
@@ -15,7 +15,7 @@ function Footer ()
                                 <div className="cta-text">
                             <a href="https://www.google.com/maps/place/San+Diego,+CA/@32.8242404,-117.389167,10z/data=!3m1!4b1!4m5!3m4!1s0x80d9530fad921e4b:0xd3a21fdfd15df79!8m2!3d32.715738!4d-117.1610838" target="_blank" rel="noopener noreferrer">
                                 <h4>Find us</h4>
-                                <span>123 Rd San Diego CA 12345</span>
+                                <span>San Diego, CA</span>
                               </a>          
                             </div>
                         </div>
@@ -37,7 +37,7 @@ function Footer ()
                                 <div className="cta-text">
                                     <a href="mailto:jcontact@info.com" target="_blank" rel="noopener noreferrer">
                                     <h4>Mail us</h4>
-                                    <span>contact@info.com</span>
+                                    <span>hellojuninguyen@gmail.com</span>
                                     </a>
                             </div>
                         </div>

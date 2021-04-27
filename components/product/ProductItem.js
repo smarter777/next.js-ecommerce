@@ -77,14 +77,18 @@ const ProductItem = ({product, handleCheck}) => {
     }
 
     return(
-        <div className="card" style={{ width: '100%' }}>
+        <div className="card" style={ { width: '100%' } }>
+            
+            <div style={{marginBottom: '1rem'}}>
+
             {
                 auth.user && auth.user.role === 'admin' &&
                 <input type="checkbox" checked={product.checked}
                 className="position-absolute"
                 style={{height: '20px', width: '20px'}}
                 onChange={() => handleCheck(product._id)} />
-            }
+                }
+        </div>
 
              <div class="img-hover-zoom img-hover-zoom--zoom-n-rotate">
                  <Link href={`product/${product._id}`}>

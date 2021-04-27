@@ -7,6 +7,7 @@ body {
   font-family: 'Baloo Thambi 2', cursive;
   background: #fef6e4;
   color: #001858;
+  scroll-behavior: smooth;
 }
 
 a {
