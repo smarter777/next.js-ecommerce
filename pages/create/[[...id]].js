@@ -128,6 +128,13 @@ const ProductsManager = () => {
             <Head>
                 <title>Products Manager</title>
             </Head>
+
+             <div>
+                <button className="btn btn-info mb-4" onClick={() => router.back()}>
+                    <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
+                </button>
+            </div>
+
             <h5>Please add all fields and upload images of your product as below:</h5>
             <form className="row" onSubmit={handleSubmit}>
                 <div className="col-md-6">
@@ -189,13 +196,15 @@ const ProductsManager = () => {
                 <div className="col-md-6 my-4 bg-info rounded">
                     <div className="input-group mb-3">
                       
-                        <div className="custom-file border-0 p-2 mt-3 rounded rounded-pill bg-dark">
+                        <div className="custom-file border-0 p-2 mt-3 rounded rounded-pill bg-dark text-white">
                           
                         <input type="file" className="rounded rounded-pill bg-dark form-control-file " 
                             onChange={handleUploadInput} multiple accept="image/*" />
                         </div>
 
-                    </div> 
+                    </div>
+                    
+                     <p className="text-white">Upload up to 5 images only!</p>
 
                     <div className="row img-up mx-0">
                         {
@@ -215,6 +224,10 @@ const ProductsManager = () => {
 
                
             </form>
+
+             <button onClick={() => router.back()} className="btn my-2 px-4" style={ { background: '#f582ae' } } >
+                            Cancel
+            </button>
 
             
         </div>

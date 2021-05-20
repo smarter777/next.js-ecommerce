@@ -40,7 +40,7 @@ const Filter = ({state}) => {
     
         <div className="input-group" style={{marginTop: '2rem', marginBottom: '2rem'}}>
             <div className="input-group-prepend col-md-2 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
-                <select className="custom-select text-capitalize rounded rounded-pill border-0 bg-info"
+                <select className="custom-select text-capitalize text-white rounded rounded-pill border-0 bg-info"
                 value={category} onChange={handleCategory}>
 
                     <option value="all">All Products</option>
@@ -55,7 +55,7 @@ const Filter = ({state}) => {
 
             <div className="col-md-8 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
             <div className="input-group">
-            <input list="title_product" type="search" placeholder="Searching our products here" aria-describedby="search-button" className="form-control rounded rounded-pill border-0 bg-info"
+            <input list="title_product" type="search" placeholder="Searching our products here" aria-describedby="search-button" className="form-control text-white rounded rounded-pill border-0 bg-info"
                 value={search.toLowerCase()} onChange={e => setSearch(e.target.value)} />
             <div className="input-group-append">
               <button id="search-button" type="button" className="btn btn-link text-info"><i className="fa fa-search"></i></button>
@@ -64,7 +64,7 @@ const Filter = ({state}) => {
             </div>
 
             <div className="input-group-prepend col-md-2 p-2 bg-dark rounded rounded-pill shadow-sm mb-4">
-                <select className="custom-select text-capitalize rounded rounded-pill border-0 bg-info"
+                <select className="custom-select text-capitalize text-white rounded rounded-pill border-0 bg-info"
                 value={sort} onChange={handleSort}>
 
                      <option value="-createdAt">Newest</option>

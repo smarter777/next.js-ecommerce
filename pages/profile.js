@@ -7,9 +7,15 @@ import valid from '../utils/valid'
 import { patchData } from '../utils/fetchData'
 
 import { imageUpload } from '../utils/imageUpload'
-import { formatDateTime} from '../utils/formatDateTime'
+import { formatDateTime } from '../utils/formatDateTime'
 
-const Profile = () => {
+import { useRouter } from 'next/router'
+
+const Profile = () =>
+{
+    
+    const router = useRouter()
+    
     const initialSate = {
         avatar: '',
         name: '',
@@ -93,13 +99,19 @@ const Profile = () => {
                 <title>Profile</title>
             </Head>
 
+             <div>
+                <button className="btn btn-info" onClick={() => router.back()}>
+                    <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
+                </button>
+            </div>
+
             <section className="row text-secondary my-3">
                 <div className="col-md-4">
                     <h3 className="text-center text-uppercase">
                         {auth.user.role === 'user' ? 'User Profile' : 'Admin Profile'}
                     </h3>
 
-                    <div className="avatar">
+                    <div className="avatar text-white">
                         <img src={avatar ? URL.createObjectURL(avatar) : auth.user.avatar} 
                         alt="avatar" />
                         <span>

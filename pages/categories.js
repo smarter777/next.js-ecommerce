@@ -3,8 +3,12 @@ import {useContext, useState} from 'react'
 import {DataContext} from '../store/GlobalState'
 import {updateItem} from '../store/Actions'
 import { postData, putData } from "../utils/fetchData";
+import { useRouter } from 'next/router'
 
-const Categories = () => {
+const Categories = () =>
+{
+    
+    const router = useRouter()
     const [name, setName] = useState('')
 
     const {state, dispatch} = useContext(DataContext)
@@ -47,8 +51,14 @@ const Categories = () => {
                 <title>Categories</title>
             </Head>
 
+             <div>
+                <button className="btn btn-info" onClick={() => router.back()}>
+                    <i className="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Go Back
+                </button>
+            </div>
+
             <div className="input-group mb-4 mt-5 p-2 bg-dark rounded rounded-pill shadow-sm">
-                <input type="text" className="form-control rounded rounded-pill border-0 bg-info"
+                <input type="text" className="form-control text-white rounded rounded-pill border-0 bg-info"
                 placeholder="Add a new category" value={name}
                 onChange={e => setName(e.target.value)} />
 
