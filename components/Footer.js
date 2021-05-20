@@ -47,7 +47,7 @@ function Footer ()
            <div className="row pt-4">
             <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div className="copyright-text">
-                            <p>Copyright &copy; 2021, All Right Reserved <a href="#">juniStore</a></p>
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="https://hellojuninguyen.netlify.app/" target="_blank" rel="noopener noreferrer">juniStore</a></p>
                         </div>
             </div>
              <div className="col-xl-6 col-lg-6 text-center text-lg-right pb-4">
