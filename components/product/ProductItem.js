@@ -12,7 +12,7 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`product/${product._id}`}>
-                    <a className="btn slide"
+                    <a className="btn slide text-info"
                         data-hover="View"
                         style={ { marginRight: '5px', flex: 1, background: '#f582ae' } }>
                          <div>
@@ -41,7 +41,7 @@ const ProductItem = ({product, handleCheck}) => {
         return(
             <>
                 <Link href={`create/${product._id}`}>
-                    <a className="btn btn-warning slide"
+                    <a className="btn bg-dark text-light slide"
                     data-hover="Edit"
                         style={ { marginRight: '5px', flex: 1 } }>
                     <div><i className="fas fa-edit"></i></div>
@@ -49,7 +49,7 @@ const ProductItem = ({product, handleCheck}) => {
                  </a>
                 </Link>
                  <Link href={`product/${product._id}`}>
-                    <a className="btn slide"
+                    <a className="btn slide text-info"
                         data-hover="View"
                         style={ { marginRight: '5px', flex: 1, background: '#8bd3dd' } }>
                          <div>
@@ -58,7 +58,7 @@ const ProductItem = ({product, handleCheck}) => {
                     </a>
                  
                 </Link>
-                <button className="btn slide"
+                <button className="btn slide text-danger"
                 data-hover="Delete"
                 style={{marginLeft: '5px', flex: 1, background: '#f582ae'}}
                 data-toggle="modal" data-target="#exampleModal"
