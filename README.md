@@ -82,11 +82,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-1. Public Page
+### Public Page
 ![Juni-jamstack-ecommerce-nextjs
 -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622026571/gallery/erfi4d2ttnwpobhufu0f.png)
 
-2. Admin Page
+### Admin Page
 ![Juni-jamstack-ecommerce-nextjs
 -adminpage](https://res.cloudinary.com/dafolrlpj/image/upload/v1622029925/gallery/lddrvbfwcgykyolathud.png)
 
@@ -120,15 +120,21 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/juniHub/jamstack-ecommerce-nextjs
-.git
+   git clone https://github.com/juniHub/jamstack-ecommerce-nextjs.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
+3. Connect to your mongodb and add info in 
+ ```sh
+  next.config.js
+  ```
 
-
+4. Run the project locally on http://localhost:3000
+   ```sh
+   npm run dev
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
