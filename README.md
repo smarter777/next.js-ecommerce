@@ -2,32 +2,59 @@
 
 [![](https://img.shields.io/github/contributors/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge)](https://github.com/juniHub/jamstack-ecommerce-nextjs/graphs/contributors) [![](https://img.shields.io/github/forks/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge)](https://github.com/juniHub/jamstack-ecommerce-nextjs/network/members) [![](https://img.shields.io/github/stars/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge)](https://github.com/juniHub/jamstack-ecommerce-nextjs/stargazers) [![](https://img.shields.io/github/issues/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge)](https://github.com/juniHub/jamstack-ecommerce-nextjs/issues) [![](https://img.shields.io/github/license/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge)](https://github.com/juniHub/jamstack-ecommerce-nextjs/blob/master/LICENSE.txt)
 
- [![Logo](.gitbook/assets/logo.png)](https://github.com/juniHub/jamstack-ecommerce-nextjs
-)
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs">
+    <img src="logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-### Juni E-commerce
+  <h3 align="center">Juni E-commerce</h3>
 
- project\_description  
- [**Explore the docs »**](https://github.com/juniHub/jamstack-ecommerce-nextjs
-)  
-  
- [View Demo](https://juni-ecommerce.vercel.app/) · [Report Bug](https://github.com/juniHub/jamstack-ecommerce-nextjs
-/issues) · [Request Feature](https://github.com/juniHub/jamstack-ecommerce-nextjs
-/issues)
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://juni-ecommerce.vercel.app/" target="_blank">View Demo</a>
+    ·
+    <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs/issues">Request Feature</a>
+  </p>
+</p>
 
-## Table of Contents
 
-1.  [About The Project](./#about-the-project)
-   * [Built With](./#built-with)
-2.  [Getting Started](./#getting-started)
-   * [Prerequisites](./#prerequisites)
-   * [Installation](./#installation)
-3. [Usage](./#usage)
-4. [Roadmap](./#roadmap)
-5. [Contributing](./#contributing)
-6. [License](./#license)
-7. [Contact](./#contact)
-8. [Acknowledgements](./#acknowledgements)
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+
+
 
 ## About The Project
 
