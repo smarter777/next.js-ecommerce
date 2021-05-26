@@ -39,7 +39,7 @@
 "><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="" target="_blank">View Demo</a>
+    <a href="https://juni-ecommerce.vercel.app/" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs
 /issues">Report Bug</a>
@@ -83,18 +83,18 @@
 ## About The Project
 
 ![Juni-jamstack-ecommerce-nextjs
--screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1621253080/gallery/janpdozvj3w2ovw2x0dd.png)
+-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622026571/gallery/erfi4d2ttnwpobhufu0f.png)
 
 
 
 ### Built With
 
-* [ExpressJS](https://expressjs.com/)
-* [Handlebars View Engine](https://handlebarsjs.com/)
+
+* [NextJS]()
 * [MongoDB](https://www.mongodb.com/)
-* [CKeditor] (https://ckeditor.com/)
 * [Cloudinary](https://cloudinary.com/)
-* [Algolia Search](https://www.algolia.com/)
+* [Bootstrap4]
+
 
 
 
@@ -166,13 +166,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Juni Nguyen - [hellojuninguyen@gmail.com](hellojuninguyen@gmail.com)
 
 Project Link: [https://github.com/juniHub/jamstack-ecommerce-nextjs
-](https://github.com/juniHub/storybook-app)
+](https://github.com/juniHub/jamstack-ecommerce-nextjs)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-Inspired by storybook project from [Traversy Media](https://github.com/bradtraversy/storybooks)
+Inspired by ecommerce project from [Traversy Media](https://github.com/bradtraversy/storybooks)
 
 
