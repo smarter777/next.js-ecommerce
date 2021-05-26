@@ -90,10 +90,11 @@
 ### Built With
 
 
-* [NextJS]()
+* [NextJS](https://nextjs.org/)
 * [MongoDB](https://www.mongodb.com/)
 * [Cloudinary](https://cloudinary.com/)
-* [Bootstrap4]
+* [Bootstrap](https://getbootstrap.com/)
+* [Deployed on Vercel](https://vercel.com/)
 
 
 
