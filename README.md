@@ -10,26 +10,16 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/juniHub/jamstack-ecommerce-nextjs
-.svg?style=for-the-badge
-[contributors-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs
-/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/juniHub/jamstack-ecommerce-nextjs
-.svg?style=for-the-badge
-[forks-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs
-/network/members
-[stars-shield]: https://img.shields.io/github/stars/juniHub/jamstack-ecommerce-nextjs
-.svg?style=for-the-badge
-[stars-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs
-/stargazers
-[issues-shield]: https://img.shields.io/github/issues/juniHub/jamstack-ecommerce-nextjs
-.svg?style=for-the-badge
-[issues-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs
-/issues
-[license-shield]: https://img.shields.io/github/license/juniHub/jamstack-ecommerce-nextjs
-.svg?style=for-the-badge
-[license-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs
-/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge
+[contributors-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge
+[forks-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs/network/members
+[stars-shield]: https://img.shields.io/github/stars/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge
+[stars-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs/stargazers
+[issues-shield]: https://img.shields.io/github/issues/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge
+[issues-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs/issues
+[license-shield]: https://img.shields.io/github/license/juniHub/jamstack-ecommerce-nextjs.svg?style=for-the-badge
+[license-url]: https://github.com/juniHub/jamstack-ecommerce-nextjs/blob/master/LICENSE.txt
 
 
 <!-- PROJECT LOGO -->
