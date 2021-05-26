@@ -89,7 +89,7 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-_For more examples, please refer to the_ [_Documentation_](https://junitiennguyen.gitbook.io/story-book)
+_For more examples, please refer to the_ [_Documentation_](https://junitiennguyen.gitbook.io/ecommerce)
 
 ## Roadmap
 
