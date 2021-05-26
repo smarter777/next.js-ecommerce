@@ -82,9 +82,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+1. Public Page
 ![Juni-jamstack-ecommerce-nextjs
 -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622026571/gallery/erfi4d2ttnwpobhufu0f.png)
 
+2. Admin Page
+![Juni-jamstack-ecommerce-nextjs
+-adminpage](https://res.cloudinary.com/dafolrlpj/image/upload/v1622029925/gallery/lddrvbfwcgykyolathud.png)
 
 
 ### Built With
