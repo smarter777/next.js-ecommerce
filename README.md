@@ -144,5 +144,5 @@ Project Link: [https://github.com/juniHub/jamstack-ecommerce-nextjs ](https://gi
 
 ## Acknowledgements
 
-Inspired by ecommerce project from \[Devat-Youtuber\]\([https://github.com/devat-youtuber/nextjs-ecommerce](https://github.com/devat-youtuber/nextjs-ecommerce)
+Inspired by ecommerce project from [Devat-Youtuber](https://github.com/devat-youtuber/nextjs-ecommerce)
 
