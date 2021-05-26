@@ -27,7 +27,7 @@
 <p align="center">
   <a href="https://github.com/juniHub/jamstack-ecommerce-nextjs
 ">
-    <img src="https://res.cloudinary.com/dafolrlpj/image/upload/v1621254108/gallery/pd5caizxucevio9vmw6z.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Juni E-commerce</h3>
