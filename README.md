@@ -105,7 +105,7 @@ This is an example of how to list things you need to use the software and how to
 3. Connect to your mongodb and add info in
 
    ```bash
-   next.config.js
+   .env.local
    ```
 
 4. Run the project locally on [http://localhost:3000](http://localhost:3000)
