@@ -116,7 +116,7 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-_For more examples, please refer to the_ [_Documentation_](https://junitiennguyen.gitbook.io/ecommerce)
+_For more examples, please refer to the [_Documentation_](https://junitiennguyen.gitbook.io/ecommerce). This will be continued for update and maintainance._
 
 ## Roadmap
 
