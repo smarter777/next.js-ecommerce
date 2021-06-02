@@ -160,7 +160,9 @@ img{
   transform: scale(2) rotate(25deg);
 }
 
-
+.product-desc{
+  white-space: pre-wrap;
+}
 
 /* ----------- Loading ------------- */
 @import url("./loading.css");

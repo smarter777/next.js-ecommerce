@@ -123,7 +123,7 @@ const ProductItem = ({product, handleCheck}) => {
                     }
                 </div>
 
-                <p className="card-text" title={product.description}>
+                <p className="card-text product-desc" title={product.description}>
                     {product.description}
                 </p>
                     

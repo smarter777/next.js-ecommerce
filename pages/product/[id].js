@@ -70,7 +70,7 @@ const DetailProduct = ( props ) =>
                     <h6 className="text-danger">Sold: {product.sold}</h6>
                 </div>
 
-                <div className="my-2">{product.description}</div>
+                <p className="my-2 product-desc">{product.description}</p>
               
                     { auth.user && auth.user.role === 'admin' ? "" :
                         <div className="row justify-content-between mx-0">

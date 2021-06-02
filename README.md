@@ -97,8 +97,6 @@
 * [Deployed on Vercel](https://vercel.com/)
 
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
