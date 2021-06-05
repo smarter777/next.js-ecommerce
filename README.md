@@ -74,11 +74,9 @@
 * [Bootstrap](https://getbootstrap.com/)
 * [Deployed on Vercel](https://vercel.com/)
 
-<<<<<<< HEAD
 
 <!-- GETTING STARTED -->
-=======
->>>>>>> 2ae2fad39d02e209a0275c51be9be62bd4e15626
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
