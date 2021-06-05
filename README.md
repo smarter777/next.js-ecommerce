@@ -143,7 +143,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Juni Nguyen - [hellojuninguyen@gmail.com](https://github.com/juniHub/jamstack-ecommerce-nextjs/tree/5e8e21f3610c2d5a773fe0846eb66c1c56aef0e2/hellojuninguyen@gmail.com)
+Juni Nguyen - [hello Juni](hellojuninguyen@gmail.com)
 
 Project Link: [https://github.com/juniHub/jamstack-ecommerce-nextjs ](https://github.com/juniHub/jamstack-ecommerce-nextjs)
 
