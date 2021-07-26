@@ -60,7 +60,7 @@
 
 ### Public Page
 
-![Juni-jamstack-ecommerce-nextjs -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622026571/gallery/erfi4d2ttnwpobhufu0f.png)
+![Juni-jamstack-ecommerce-nextjs -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1627304393/gallery/lpw7aigx8h6hyywromse.png)
 
 ### Admin Page
 
