@@ -90,7 +90,7 @@ const ProductItem = ({product, handleCheck}) => {
                 }
         </div>
 
-             <div class="img-hover-zoom img-hover-zoom--zoom-n-rotate">
+             <div className="img-hover-zoom img-hover-zoom--zoom-n-rotate">
                  <Link href={`product/${product._id}`}>
                 <img className="card-img-top" src={ product.images[ 0 ].url } alt={ product.images[ 0 ].url } />
                 
