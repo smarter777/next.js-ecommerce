@@ -60,7 +60,7 @@
 
 ### Public Page
 
-![Juni-jamstack-ecommerce-nextjs -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622026571/gallery/erfi4d2ttnwpobhufu0f.png)
+![Juni-jamstack-ecommerce-nextjs -screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1627304393/gallery/lpw7aigx8h6hyywromse.png)
 
 ### Admin Page
 
@@ -74,11 +74,9 @@
 * [Bootstrap](https://getbootstrap.com/)
 * [Deployed on Vercel](https://vercel.com/)
 
-<<<<<<< HEAD
 
 <!-- GETTING STARTED -->
-=======
->>>>>>> 2ae2fad39d02e209a0275c51be9be62bd4e15626
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -143,7 +141,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Juni Nguyen - [hellojuninguyen@gmail.com](https://github.com/juniHub/jamstack-ecommerce-nextjs/tree/5e8e21f3610c2d5a773fe0846eb66c1c56aef0e2/hellojuninguyen@gmail.com)
+Juni Nguyen - [helloJuni](https://hellojuninguyen.netlify.app/)
 
 Project Link: [https://github.com/juniHub/jamstack-ecommerce-nextjs ](https://github.com/juniHub/jamstack-ecommerce-nextjs)
 
