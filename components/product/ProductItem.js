@@ -110,11 +110,7 @@ const ProductItem = ({product, handleCheck}) => {
 
                     
                 
-<<<<<<< HEAD
              <span className="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>
-=======
-             <span class="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>
->>>>>>> f092eab8ba215ffc26d723f2231dc2c5a7608f5f
                    
                 </div>
 
