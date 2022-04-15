@@ -57,7 +57,7 @@ const DetailProduct = ( props ) =>
             <div className="col-md-6 mt-3">
                     <h2 className="text-uppercase">{ product.title }</h2>
                     
-                    <span class="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>
+                    <span className="badge rounded-pill bg-info text-light text-capitalize mb-4 p-2">Seller: { product.seller }</span>
                     <h5 className="text-danger">${product.price}</h5>
 
                 <div className="row mx-0 d-flex justify-content-between">

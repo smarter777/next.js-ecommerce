@@ -22,7 +22,7 @@ function Footer ()
                     </div>
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
-                             <i class="fab fa-facebook-messenger"></i>
+                             <i className="fab fa-facebook-messenger"></i>
                                 <div className="cta-text">
                                  <a href="https://www.facebook.com/helloJuniNguyen" target="_blank" rel="noopener noreferrer">
                                 <h4>Text Juni</h4>
