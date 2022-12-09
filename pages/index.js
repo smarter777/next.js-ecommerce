@@ -15,6 +15,9 @@ const Home = (props) => {
   const [page, setPage] = useState(1)
   const router = useRouter()
 
+ let totalPage = 1
+
+
   const {state, dispatch} = useContext(DataContext)
   const {auth} = state
 
@@ -57,6 +60,7 @@ const Home = (props) => {
 
   const handleLoadmore = () => {
     setPage(page + 1)
+   
     filterSearch({router, page: page + 1})
   }
 
@@ -70,35 +74,69 @@ const Home = (props) => {
 
       {
         auth.user && auth.user.role === 'admin' &&
-        <div className="delete_all btn btn-info mt-2" style={{marginBottom: '-10px'}}>
+        <div className="delete_all btn btn-info mt-2 mb-4">
           <input type="checkbox" checked={isCheck} onChange={handleCheckALL}
           style={{width: '25px', height: '25px', transform: 'translateY(8px)'}} />
 
           <button className="btn ml-2" style={{ background: '#f582ae'}}
           data-toggle="modal" data-target="#exampleModal"
           onClick={handleDeleteAll}>
-            CLICK TO DELETE
+            CLICK TO DELETE ALL
           </button>
         </div>
       }
 
-      <div className="products">
+      <div className="">
         {
           products.length === 0 
-          ? <h2>No Products</h2>
+          ? 
+          
+          <h2>No product found!</h2>
 
-          : products.map(product => (
+          :
+
+          <>
+
+          <h2>{`There are ${products.length * totalPage} products on this page!`}</h2>
+          
+
+          <div className="products">
+         
+           {products.map(product => (
+   
+        
             <ProductItem key={product._id} product={product} handleCheck={handleCheck} />
-          ))
+       
+          ))}
+
+          </div>
+
+
+          </>
+          
         }
+        
       </div>
       
       {
-        props.result < page * 6 ? ""
-        : <button className="btn btn-outline-info d-block mx-auto mb-4"
-        onClick={handleLoadmore}>
+        props.result < page * 9 ? ""
+        : 
+
+        <>
+       
+        { totalPage = totalPage + 1}
+        
+        
+        <button className="btn btn-outline-info d-block mx-auto mb-4"
+
+            onClick={handleLoadmore}>
+
           Load more
+
         </button>
+
+        </>
+        
       }
     
     </div>
@@ -113,11 +151,12 @@ export async function getServerSideProps({query}) {
   const search = query.search || 'all'
 
   const res = await getData(
-    `product?limit=${page * 6}&category=${category}&sort=${sort}&title=${search}`
+    `product?limit=${page * 9}&category=${category}&sort=${sort}&title=${search}`
   )
   // server side rendering
   return {
     props: {
+      
       products: res.products,
       result: res.result
     }, // will be passed to the page component as props

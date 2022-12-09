@@ -40,16 +40,9 @@ const createCategory = async (req, res) => {
 const getCategories = async (req, res) => {
     try {
     
-        const categories = await Categories.find()
-        
-
-    //const result = await auth(req, res)
-
-    //const categories = await Categories.find({user: result.id}).populate("user", "-password")
+       const categories = await Categories.find()
       
-   //const categories = await Categories.find().populate("user", "-password")
-   
-    res.json({categories})
+        res.json({categories})
 
     } catch (err) {
         return res.status(500).json({err: 'Sorry. Please Login Again or Contact Us!'})

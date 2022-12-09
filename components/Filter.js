@@ -43,9 +43,10 @@ const Filter = ({state}) => {
                 <select className="custom-select text-capitalize text-white rounded rounded-pill border-0 bg-info"
                 value={category} onChange={handleCategory}>
 
-                    <option value="all">All Products</option>
+                    <option value="all">All Products </option>
 
                     {
+                        
                         categories.map(item => (
                             <option key={item._id} value={item._id}>{item.name}</option>
                         ))

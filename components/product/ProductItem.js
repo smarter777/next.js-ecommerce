@@ -106,7 +106,8 @@ const ProductItem = ({product, handleCheck}) => {
                     {product.title}
                 </h5>
                 </Link>
-                    
+
+                                  
 
                     
                 
