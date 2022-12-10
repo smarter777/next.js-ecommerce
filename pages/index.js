@@ -59,6 +59,9 @@ const Home = (props) => {
   }
 
   const handleLoadmore = () => {
+
+    totalPage++
+    
     setPage(page + 1)
    
     filterSearch({router, page: page + 1})
@@ -120,11 +123,12 @@ const Home = (props) => {
       
       {
         props.result < page * 9 ? ""
+
         : 
 
         <>
        
-        { totalPage = totalPage + 1}
+        {` Page: ${page}`}
         
         
         <button className="btn btn-outline-info d-block mx-auto mb-4"
